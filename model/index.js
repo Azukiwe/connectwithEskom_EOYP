@@ -168,6 +168,7 @@ class Product{
         db.query(strQry,[req.body],
             (err)=>{
                 if(err){
+                    console.error(err);
                     res.status(400).json({err:"Unable to insert a new record."});
                 }else{
                     res.status(200).json({msg:"Data has been successfully saved"});
