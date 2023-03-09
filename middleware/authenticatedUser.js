@@ -22,7 +22,7 @@ function verifyToken(req, res, next) {
             req.authenticated = true;
             next();
         }else {
-            res.statusa(400).json({err: "Register Please"})
+            res.status(400).json({err: "Register Please"})
         }
     }else {
         res.status(400).json({err: u.message});
