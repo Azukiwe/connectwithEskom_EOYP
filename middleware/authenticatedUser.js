@@ -25,10 +25,10 @@ function verifyToken(req, res, next) {
             res.status(400).json({err: "Register Please"})
         }
     }else {
-        res.status(400).json({err: u.message});
+        res.status(400).json({err: e.message});
     }
-    }catch(u){
-    res.status(400).json({err: u.message});
+    }catch(e){
+    res.status(400).json({err: e.message});
     }
 }
 module.exports = {createToken, verifyToken};
