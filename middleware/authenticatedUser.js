@@ -8,13 +8,13 @@ function createToken(user) {
     },
     process.env.SECRET_kEY,
     {
-        expiresIn:'45m'
+        expiresIn:'1h'
     });
 }
 //VERIFYING A TOKEN
 function verifyToken(req, res, next) {
     try{
-        const token = req.cookie["RealUser"] !== null ? req.cookie["RealUser"] : "Register Please";
+        const token = req.cookies["RealUser"] !== null ? req.cookies["RealUser"] : "Register Please";
         const isValidated = null;
         if(token !== "Register Please") {
             isValidated = verify(token, process.env.SECRET_KEY);
