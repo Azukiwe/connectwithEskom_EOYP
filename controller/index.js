@@ -12,8 +12,8 @@ route.get("^/$|/GetConnected_Eskom", (req, res) => {
 route.post("/login",bodyParser.json(), (req, res) => {
     user.login(req, res);
 });
-route.get("/user", (req, res) => {
-    user.FetchUser(req, res);
+route.get("/users", (req, res) => {
+    user.FetchUsers(req, res);
 });
 route.put("/user/:id", bodyParser.json(), (req, res) => {
     user.updateUser(req, res);

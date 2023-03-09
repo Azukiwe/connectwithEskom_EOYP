@@ -1,6 +1,6 @@
 let db = require('../config');
 let{hash,compare,hashSync} = require('bcrypt');
-let {createToken} = require('../middleware/AuthenticatedUser.js');
+let {createToken} = require('../middleware/authenticatedUser.js');
 //USER CLASS 
 class User{
     login(req, res){
